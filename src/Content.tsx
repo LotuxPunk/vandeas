@@ -108,7 +108,7 @@ export default function Content() {
             <Heading>
                 Projects
             </Heading>
-            <SimpleGrid minChildWidth={'400px'} spacing={'8px'} my={2}>
+            <SimpleGrid columns={[1, null, 2]} spacing={'8px'} my={2}>
                 {projects.map((project, index) => (
                     <Link key={index} backgroundColor={'darkerblue.600'} borderRadius={"2xl"} maxW={'full'} p={2} boxShadow={'lg'} href={project.link} _hover={{ backgroundColor: 'darkerblue.400' }} target='_blank'>
                         <HStack align={'flex-start'}>
