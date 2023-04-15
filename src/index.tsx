@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ChakraProvider, DarkMode } from '@chakra-ui/react';
+import theme from './theme';
+
+import "@fontsource/inter"
+import "@fontsource/gowun-dodum"
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={theme}>
+      <DarkMode>
+        <App />
+      </DarkMode>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
